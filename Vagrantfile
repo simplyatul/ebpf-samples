@@ -6,6 +6,7 @@ Vagrant.configure("2") do |config|
  config.vm.box_version = "20241002.0.0"
 
  config.vm.synced_folder "./shared-with-vm", "/shared-with-host"
+ config.vm.synced_folder "~/code", "/shared-with-host/code"
  config.vm.hostname = "ebpf"
 
  config.vm.provider "virtualbox" do |vb|
